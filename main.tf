@@ -401,7 +401,7 @@ resource "aws_codepipeline_webhook" "default" {
 }
 
 module "github_webhook" {
-  source = "git::https://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:x-oauth-basic@github.com/axerinc/terraform-github-repository-webhooks.git?ref=refactor/remove-providers"
+  source = "git::https://github.com/axerinc/terraform-github-repository-webhooks.git?ref=refactor/remove-providers"
   # version = "0.12.0"
 
   enabled              = local.webhook_enabled
