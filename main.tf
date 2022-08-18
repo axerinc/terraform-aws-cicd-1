@@ -238,7 +238,7 @@ data "aws_iam_policy_document" "codebuild" {
 }
 
 module "codebuild" {
-  source                      = "git::https://github.com/axerinc/terraform-aws-codebuild.git?ref=refactor-s3-resource-v4"
+  source                      = "git::https://github.com/axerinc/terraform-aws-codebuild.git?ref=v0.38.1"
   build_image                 = var.build_image
   build_compute_type          = var.build_compute_type
   buildspec                   = var.buildspec
@@ -401,7 +401,7 @@ resource "aws_codepipeline_webhook" "default" {
 }
 
 module "github_webhook" {
-  source = "git::https://github.com/axerinc/terraform-github-repository-webhooks.git?ref=refactor/remove-providers"
+  source = "git::https://github.com/axerinc/terraform-github-repository-webhooks.git?ref=v0.12.2"
   # version = "0.12.0"
 
   enabled              = local.webhook_enabled
